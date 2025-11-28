@@ -13,7 +13,7 @@ To start creating a dataset for Object Detection, follow these steps:
 The dataset creation page will look like the following:
 
 <p align="center">
-  <img src="/assets/platform_ui/cvat_task.png" alt="CVAT" width="800">
+  <img src="../../assets/platform_ui/cvat_task.png" alt="CVAT" width="800">
 </p>
 
 ### Annotation Process
@@ -22,7 +22,7 @@ Once the dataset is created, you can start annotating the images. The annotation
 - **Draw bounding box Tool**: Allows users to draw bounding boxes around objects of interest to assign them to a specific class.
 
 <p align="center">
-  <img src="/assets/platform_ui/cvat_obj_det.png" alt="CVAT" width="800">
+  <img src="../../assets/platform_ui/cvat_obj_det.png" alt="CVAT" width="800">
 </p>
 
 
@@ -54,5 +54,5 @@ Once the model is trained, you can use it for inference on new images. To perfor
 Once the Inference process is complete, the detected objects will be displayed directly into the same page, showing the bounding boxes around the recognized objects.
 
 <p align="center">
-  <img src="/assets/platform_ui/od_inference.png" alt="CVAT" width="800">
+  <img src="../../assets/platform_ui/od_inference.png" alt="CVAT" width="800">
 </p>

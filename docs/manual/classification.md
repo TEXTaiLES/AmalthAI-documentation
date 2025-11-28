@@ -48,5 +48,5 @@ Once the model is trained, you can use it for inference on new images. To perfor
 Once the Inference process is complete, the result will be displayed directly into the same page, showing the origin image along with the corresponding class and confidence score.
 
 <p align="center">
-  <img src="/assets/platform_ui/class_inference.png" alt="CVAT" width="800">
+  <img src="../../assets/platform_ui/class_inference.png" alt="CVAT" width="800">
 </p>

@@ -13,7 +13,7 @@ To start creating a dataset for semantic segmentation, follow these steps:
 The dataset creation page will look like the following:
 
 <p align="center">
-  <img src="/assets/platform_ui/cvat_task.png" alt="CVAT" width="800">
+  <img src="../../assets/platform_ui/cvat_task.png" alt="CVAT" width="800">
 </p>
 
 ### Annotation Process
@@ -24,7 +24,7 @@ Once the dataset is created, you can start annotating the images. The annotation
 - **Polygon/Rectangle Selection Tool**: Enables users to create precise masks by outlining the area of interest with polygons or rectangles.
 
 <p align="center">
-  <img src="/assets/platform_ui/cvat_semantic_segm.png" alt="CVAT" width="800">
+  <img src="../../assets/platform_ui/cvat_semantic_segm.png" alt="CVAT" width="800">
 </p>
 
 
@@ -56,5 +56,5 @@ Once the model is trained, you can use it for inference on new images. To perfor
 Once the Inference process is complete, the segmented image will be displayed directly into the same page, showing the different regions classified according to the predefined classes.
 
 <p align="center">
-  <img src="/assets/platform_ui/segm_inference.png" alt="CVAT" width="800">
+  <img src="../../assets/platform_ui/segm_inference.png" alt="CVAT" width="800">
 </p>

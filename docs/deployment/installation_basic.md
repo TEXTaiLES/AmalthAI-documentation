@@ -2,7 +2,7 @@
 
 The whole platform architecture is depicted in the following diagram:
 <p align="center">
-  <img src="/assets/platform_ui/amalthai_architecture.png" alt="Platform Architecture" width="800">
+  <img src="../../assets/platform_ui/amalthai_architecture.png" alt="Platform Architecture" width="800">
 </p>
 
 Minimum system requirements for a local installation are:
@@ -27,7 +27,7 @@ Make sure that you have a local installation of [Docker](https://www.docker.com/
 
 <p align="center">
     <a href = "https://docs.docker.com/engine/install/ubuntu/" target="_blank">
-        <img src="/assets/docker_logo.png" alt="Docker" width="200"/>
+        <img src="../../assets/docker_logo.png" alt="Docker" width="200"/>
     </a>
 </p>
 
@@ -36,7 +36,7 @@ Make sure that you have a local installation of [Docker](https://www.docker.com/
 
 <p align="center">
     <a href = "https://kubernetes.io/docs/setup/" target="_blank">
-        <img src="/assets/kubernetes_logo.png" alt="Kubernetes" width="200"/>
+        <img src="../../assets/kubernetes_logo.png" alt="Kubernetes" width="200"/>
     </a>
 </p>
 
@@ -45,7 +45,7 @@ Make sure that you have a local installation of [Docker](https://www.docker.com/
 
 <p align="center">
     <a href = "https://www.kubeflow.org/docs/started/installing-kubeflow/" target="_blank">
-        <img src="/assets/kubeflow_logo.png" alt="Kubeflow" width="200"/>
+        <img src="../../assets/kubeflow_logo.png" alt="Kubeflow" width="200"/>
     </a>
 </p>
 
@@ -99,7 +99,7 @@ docker run --gpus all -it  --shm-size=32G --name YOLO_Container -v /path/to/Obje
 
 <p align="center">
     <a href = "https://pytorch.org/" target="_blank">
-        <img src="/assets/pytorch_logo.png" alt="Kubeflow" width="200"/>
+        <img src="../../assets/pytorch_logo.png" alt="Kubeflow" width="200"/>
     </a>
 </p>
 
@@ -120,7 +120,7 @@ For the annotation purposes of this platform, we utilize [CVAT](https://www.cvat
 
 <p align="center">
     <a href = "https://www.cvat.ai/" target="_blank">
-        <img src="/assets/cvat_logo.png" alt="Kubeflow" width="200"/>
+        <img src="../../assets/cvat_logo.png" alt="Kubeflow" width="200"/>
     </a>
 </p>
 

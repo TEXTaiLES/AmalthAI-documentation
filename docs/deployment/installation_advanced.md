@@ -9,7 +9,7 @@ kubectl port-forward svc/istio-ingressgateway -n istio-system 8080:80
 Then, open your web browser and navigate to `http://localhost:8080/`. From there, you can access the Kubeflow Dashboard and explore the different components, including Katib.
 
 <p align="center">
-  <img src="/assets/platform_ui/kubeflow_cp.png" alt="CVAT" width="800">
+  <img src="../../assets/platform_ui/kubeflow_cp.png" alt="CVAT" width="800">
 </p>
 
 ### Monitor current running pods for debugging
