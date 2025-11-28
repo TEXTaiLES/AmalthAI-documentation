@@ -1,0 +1,44 @@
+# Site information
+site_name: AmalthAI Machine Learning Platform
+site_url: https://sitename.example
+site_author: Christos Chatzisavvas
+site_description: AmalthAI ML Platform Documentation
+
+# Copyright
+copyright: Copyright &copy; 2025 TEXTaiLES Project Coordinated by Athena Research Center
+
+# Repository
+repo_name: AmalthAI
+repo_url: https://github.com/TEXTaiLES/AmalthAI
+
+# Config
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: teal
+  logo: assets/AmalthAI_Logo.png
+  favicon: assets/AmalthAI_Logo.png
+
+# Extra
+extra:
+  social: 
+    - icon: fontawesome/brands/github
+      link: https://github.com/TEXTaiLES
+
+extra_css:
+  - stylesheets/extra.css
+
+# Page
+nav:
+  - Home: index.md
+  - Deployment: 
+    - Installation Steps: deployment/installation_basic.md
+    - Advanced Settings: deployment/installation_advanced.md
+  - Manual:
+    - User Interface: manual/ui.md
+    - Semantic Segmentation Mode: manual/semantic_segm.md
+    - Object Detection Mode: manual/object_detection.md
+    - Classification Mode: manual/classification.md
+  - Expansions:
+    - Platform Expansions: expansions/expansions.md
