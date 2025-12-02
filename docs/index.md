@@ -29,4 +29,5 @@ Technologies used in AmalthAI include:
     </a>
     <a href = "https://flask.palletsprojects.com/en/stable/" target="_blank">
         <img src="assets/flask_logo.png" alt="AmalthAI" width="150"/>
+    </a>
 </p>

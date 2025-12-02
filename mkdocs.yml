@@ -5,7 +5,7 @@ site_author: Christos Chatzisavvas
 site_description: AmalthAI ML Platform Documentation
 
 # Copyright
-copyright: Copyright &copy; 2025 TEXTaiLES Project Coordinated by Athena Research Center
+copyright: Copyright &copy; 2025 TEXTaiLES Project
 
 # Repository
 repo_name: AmalthAI
@@ -28,6 +28,9 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+  
+extra_javascript:
+  - javascripts/extra.js
 
 # Page
 nav:
