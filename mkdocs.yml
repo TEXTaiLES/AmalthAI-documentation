@@ -35,6 +35,7 @@ extra_javascript:
 # Page
 nav:
   - Home: index.md
+  - General Information: info/general_info.md
   - Deployment: 
     - Installation Steps: deployment/installation_basic.md
     - Advanced Settings: deployment/installation_advanced.md
