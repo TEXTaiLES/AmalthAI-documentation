@@ -39,9 +39,6 @@ Instead of a full Kubernetes installation, this platform uses kind (Kubernetes i
     <a href = "https://kubernetes.io/docs/setup/" target="_blank">
         <img src="../../assets/kubernetes_logo.png" alt="Kubernetes" width="200"/>
     </a>
-    <a href = "https://www.kubeflow.org/" target="_blank">
-            <img src="../../assets/kubeflow_logo.png" alt="AmalthAI" width="200"/>
-    </a>
 </p>
 
 ### Step 3 - Cluster Setup and Katib Installation
@@ -79,6 +76,13 @@ Also, ensure that the cluster:
  - has at least one directory shared between the cluster and the local machine (located inside the `config.yml` file under `extraMounts` as `containerPath` and `hostPath` respectively).
 
 When the above directory is mounted, make sure that you move every folder from the `Backend` folder inside that directory so that the three tasks are accessible from the Katib pipelines.
+
+<p align="center">
+    <a href = "https://www.kubeflow.org/" target="_blank">
+            <img src="../../assets/kubeflow_logo.png" alt="AmalthAI" width="200"/>
+    </a>
+</p>
+
 
 ### Step 4 - Docker Images Setup
 Machine learning models require appropriate environments to run on. Because the platform is Kubernetes-based, there is need for ready-to-use docker containers. 
