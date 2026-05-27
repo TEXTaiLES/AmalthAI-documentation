@@ -45,10 +45,10 @@ Instead of a full Kubernetes installation, this platform uses kind (Kubernetes i
 
 **Create the kind cluster:**
 ```bash
-kind create cluster --name=kubeflow --config=config.yml
+kind create cluster --name=kubeflow --config=cluster-config.yml
 docker exec -ti kubeflow-control-plane ln -s /sbin/ldconfig /sbin/ldconfig.real
 ```
-The `config.yml` file can be found under the `Backend` folder.
+The `cluster-config.yml` file can be found under the `Backend` folder.
 
 **Install Helm:**
 ```bash
