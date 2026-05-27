@@ -1,12 +1,12 @@
 ## Further Instructions for Advanced Users
 
 ### Manage your deployments using Kubeflow
-To further view and manage your Katib experiments, you can use the Kubeflow Dashboard. The dashboard provides a user-friendly interface to monitor the status of your deployments and access various Kubeflow components. As platform administrator you can start the daskboard by running the following command:
+To further view and manage your Katib experiments, you can use the integrated dashboard, which provides a user-friendly interface to monitor the status of your deployments. As platform administrator you can start the dashboard by running the following command:
 
 ```
-kubectl port-forward svc/istio-ingressgateway -n istio-system 8080:80
+kubectl port-forward svc/katib-ui -n kubeflow 8080:80
 ```
-Then, open your web browser and navigate to `http://localhost:8080/`. From there, you can access the Kubeflow Dashboard and explore the different components, including Katib.
+Then, open your web browser and navigate to `http://localhost:8080/`. From there, you can access the Kind Dashboard and explore the different experiments.
 
 <p align="center">
   <img src="../../assets/platform_ui/kubeflow_cp.png" alt="CVAT" width="800">
@@ -118,7 +118,3 @@ spec:
 ``` 
 
 A custom version of this script is applied every time the Start Training button is pressed in the platform UI. You can find the relevant code used for this implementation inside the `/Frontend/AmalthAI_WebApp/utils/experiment_organize.py` file.
-
-### CVAT Integration
-
-Make sure that CVAT is properly setted up and running inside your system and the right port is already updated on the main `app.py` file of the platform.
