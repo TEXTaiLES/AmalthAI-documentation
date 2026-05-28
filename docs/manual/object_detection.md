@@ -28,10 +28,51 @@ Once the dataset is created, you can start annotating the images. The annotation
 
 **Important Note**: For Object Detection, the Draw bounding box Tool is the primary tool used for annotation.
 
-Once you navigate through all images and complete the annotations, click the Menu button on the top left corner and change the job state to completed. Once this process is done, you will be able to see the dataset ready for training in the Collections page for the corresponding task type.
+### Dataset Registration
+After completing the annotation process, you have to export the dataset using the **Ultralytics YOLO Detection 1.0** export format from CVAT.
+
+The generated bounding boxes can be found under the `labels/` directory of the exported dataset.
+
+Finally, the dataset should follow the structure below:
+```
+DatasetName/
+├── train/
+│   ├── images/
+│   │   ├── image_001.jpg
+│   │   ├── image_002.jpg
+│   │   └── ...
+│   └── labels/
+│       ├── image_101.txt
+│       ├── image_102.txt
+│       └── ...
+├── valid/
+│   ├── images/
+│   │   ├── image_001.png
+│   │   ├── image_002.png
+│   │   └── ...
+│   └── labels/
+│       ├── image_101.txt
+│       ├── image_102.txt
+│       └── ...
+└── data.yaml
+```
+`data.yaml` should contain:
+
+```
+train: ../train/images
+val: ../valid/images
+
+nc: N #Define the number of classes
+names: ['Label1', 'Label2', ...] # Class Names
+```
+
+Once the dataset structure is finalized:
+
+1. Compress the `DatasetName/` directory into a `.zip` archive.
+2. Upload the generated `.zip` file to AmalthAI using the **Add a new detection dataset** button.
 
 ### Training Initiation
-After completing the annotation process, you can initiate the training of your semantic segmentation model. Follow these steps:
+After dataset is uploaded, you can initiate the training of your object detection model. Follow these steps:
 
 1. Navigate to the Train an ML model page.
 2. Select the Object Detection mode.

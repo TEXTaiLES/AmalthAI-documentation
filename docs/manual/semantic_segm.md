@@ -30,10 +30,43 @@ Once the dataset is created, you can start annotating the images. The annotation
 
 **Important Note**: For Semantic Segmentation, the Draw mask Tool is primarily used especially when dealing with complex shapes and regions.
 
-Once you navigate through all images and complete the annotations, click the Menu button on the top left corner and change the job state to completed. Once this process is done, you will be able to see the dataset ready for training in the Collections page for the corresponding task type.
+### Dataset Registration
+After completing the annotation process, you have to export the dataset using the **Segmentation Mask 1.1** export format from CVAT.
+
+The generated segmentation masks can be found under the `SegmentationClass/` directory of the exported dataset.
+
+Finally, the dataset should follow the structure below:
+```
+DatasetName/
+├── images/
+│   ├── train/
+│   │   ├── image_001.jpg
+│   │   ├── image_002.jpg
+│   │   └── ...
+│   └── val/
+│       ├── image_101.jpg
+│       ├── image_102.jpg
+│       └── ...
+├── masks/
+│   ├── train/
+│   │   ├── image_001.png
+│   │   ├── image_002.png
+│   │   └── ...
+│   └── val/
+│       ├── image_101.png
+│       ├── image_102.png
+│       └── ...
+└── labelmap.txt
+```
+`labelmap.txt` defines the mapping between class IDs (colors) and class names. It is automatically exported from CVAT when using the Segmentation Mask 1.1 export format.
+
+Once the dataset structure is finalized:
+
+1. Compress the `DatasetName/` directory into a `.zip` archive.
+2. Upload the generated `.zip` file to AmalthAI using the **Add a new segmentation dataset** button.
 
 ### Training Initiation
-After completing the annotation process, you can initiate the training of your semantic segmentation model. Follow these steps:
+After dataset is uploaded, you can initiate the training of your semantic segmentation model. Follow these steps:
 
 1. Navigate to the Train an ML model page.
 2. Select the Semantic Segmentation mode.
