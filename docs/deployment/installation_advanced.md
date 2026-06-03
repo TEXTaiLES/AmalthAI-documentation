@@ -117,4 +117,4 @@ spec:
             restartPolicy: OnFailure
 ``` 
 
-A custom version of this script is applied every time the Start Training button is pressed in the platform UI. You can find the relevant code used for this implementation inside the `/Frontend/AmalthAI_WebApp/utils/experiment_organize.py` file.
+A custom version of this script is applied every time the Start Training button is pressed in the platform UI. You can find the relevant code used for this implementation inside the `AmalthAI_WebApp/utils/experiment_organize.py` file.
