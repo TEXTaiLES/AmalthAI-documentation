@@ -6,7 +6,7 @@ To further view and manage your Katib experiments, you can use the integrated da
 ```
 kubectl port-forward svc/katib-ui -n kubeflow 8080:80
 ```
-Then, open your web browser and navigate to `http://localhost:8080/`. From there, you can access the Kind Dashboard and explore the different experiments.
+Then, open your web browser and navigate to `http://localhost:8080/katib`. From there, you can access the Kind Dashboard and explore the different experiments.
 
 <p align="center">
   <img src="../../assets/platform_ui/kubeflow_cp.png" alt="CVAT" width="800">
