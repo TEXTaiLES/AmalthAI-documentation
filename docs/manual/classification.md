@@ -2,25 +2,68 @@
 In classification mode, the model assigns a single label to an entire image, indicating the primary object or scene depicted. This allows the user to train the model to recognize and categorize images based on their content.
 
 ### Dataset Creation
-To start creating a dataset for classification, you need to organize your images into folders, where each folder represents a different class. For example, if you are classifying images with type of materials, you need to have separate folders for "wool", "cotton" and "silk". Once your images are organized, you can upload them to the platform and create a new classification task.
-The structure should look like this:
+
+To create a classification dataset, organize your images into separate folders, where each folder corresponds to a class label.
+
+For example, if you are building a material classification dataset, you might create folders such as **wool**, **cotton**, and **silk**, and place the corresponding images inside each folder.
+
+The dataset structure should look like this:
 
 ```
 DatasetName/
 │
-├── Class1/
-│   ├── obj1.jpg
-│   ├── obj2.jpg
-├── Class2/
-│   ├── obj3.jpg
-│   ├── obj4.jpg
-├── Class3/
-│   ├── obj5.jpg
-│   ├── obj6.jpg
+├── wool/
+│   ├── img1.jpg
+│   ├── img2.jpg
+│
+├── cotton/
+│   ├── img3.jpg
+│   ├── img4.jpg
+│
+└── silk/
+    ├── img5.jpg
+    └── img6.jpg
+```
+
+If no train/validation split is provided, the platform will automatically split the dataset into **70% training** and **30% validation** samples.
+
+### Providing a Pre-Split Dataset
+
+If you prefer to define the training and validation sets yourself, organize the dataset using separate **train** and **val** directories:
+
+```
+DatasetName/
+│
+├── train/
+│   ├── wool/
+│   │   ├── img1.jpg
+│   │   └── img2.jpg
+│   │
+│   ├── cotton/
+│   │   ├── img3.jpg
+│   │   └── img4.jpg
+│   │
+│   └── silk/
+│       ├── img5.jpg
+│       └── img6.jpg
+│
+└── val/
+    ├── wool/
+    │   ├── img7.jpg
+    │   └── img8.jpg
+    │
+    ├── cotton/
+    │   ├── img9.jpg
+    │   └── img10.jpg
+    │
+    └── silk/
+        ├── img11.jpg
+        └── img12.jpg
 ```
 
 ### Annotation Process
-Once the dataset is created based on the previous mentioned structure, you can compress it as .zip file and upload it to the platform. The platform will automatically recognize the folder structure and register the dataset accordingly.
+
+Once your dataset is organized, you can compress it as .zip file and upload it to the platform. The platform will automatically recognize the folder structure and register the dataset accordingly.
 
 When you complete the upload, the platform will display the dataset existance in the Collections page, showing the number of images it contains.
 
