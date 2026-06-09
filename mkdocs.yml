@@ -41,6 +41,7 @@ nav:
     - Advanced Settings: deployment/installation_advanced.md
   - Manual:
     - User Interface: manual/ui.md
+    - Training Parameters: manual/training_params.md
     - Semantic Segmentation Mode: manual/semantic_segm.md
     - Object Detection Mode: manual/object_detection.md
     - Classification Mode: manual/classification.md
