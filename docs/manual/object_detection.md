@@ -97,3 +97,7 @@ Once the Inference process is complete, the detected objects will be displayed d
 <p align="center">
   <img src="../../assets/platform_ui/od_inference.png" alt="CVAT" width="800">
 </p>
+
+### Evaluation Metric
+
+mAP 50–95 is an object detection metric that measures both how well a model finds objects and how accurately it localizes them. It is computed by first calculating Average Precision for each class, where a prediction is considered correct if its overlap with the ground truth exceeds a given IoU threshold. Instead of using a single threshold, AP is computed at multiple IoU thresholds ranging from 0.50 to 0.95, and then averaged across all classes and all thresholds. This makes the metric stricter because it evaluates performance under increasingly precise localization requirements.

@@ -24,7 +24,7 @@
 These techniques slightly change the original images to artificially create new data, helping the model generalize better.
 
 <p align="center">
-  <img src="../../assets/Augmentations.png" alt="Augmentations" width="800">
+  <img src="../../assets/others/Augmentations.png" alt="Augmentations" width="800">
 </p>
 
 * **Blur:** Makes the image less sharp.

@@ -93,3 +93,7 @@ Once the Inference process is complete, the result will be displayed directly in
 <p align="center">
   <img src="../../assets/platform_ui/class_inference.png" alt="CVAT" width="800">
 </p>
+
+### Evaluation Metric
+
+Accuracy for classification is a metric that measures how well a model correctly assigns labels to input samples. It is computed by comparing the predicted class with the true class for each sample and counting how many predictions are correct. The final accuracy is obtained by dividing the number of correct predictions by the total number of samples. It provides a single overall score that reflects the proportion of correctly classified examples.
