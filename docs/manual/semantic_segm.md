@@ -94,7 +94,7 @@ Once the Inference process is complete, the segmented image will be displayed di
 
 ### Evaluation Metric
 
-For semantic segmentation, the evaluation metric is mean Intersection over Union (mIoU). It is computed by first measuring for each class, how well the predicted pixels match the ground truth pixels in terms of overlap, balancing correct detections against both missed regions and incorrect predictions. This overlap score is calculated separately for every class in the dataset. The final mIoU is obtained by averaging these per-class overlap scores, giving a single value that reflects the overall quality of the segmentation across all categories.
+For semantic segmentation, the evaluation metric is `mean Intersection over Union (mIoU)`. It is computed by first measuring for each class, how well the predicted pixels match the ground truth pixels in terms of overlap, balancing correct detections against both missed regions and incorrect predictions. This overlap score is calculated separately for every class in the dataset. The final mIoU is obtained by averaging these per-class overlap scores, giving a single value that reflects the overall quality of the segmentation across all categories.
 
 <p align="center">
   <img src="../../assets/others/miou.png" alt="miou_fig" width="400">
