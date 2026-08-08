@@ -42,6 +42,7 @@ nav:
   - Manual:
     - User Interface: manual/ui.md
     - Training Parameters: manual/training_params.md
+    - Dataset Preparation: manual/dataset_prep.md
     - Semantic Segmentation Mode: manual/semantic_segm.md
     - Object Detection Mode: manual/object_detection.md
     - Classification Mode: manual/classification.md

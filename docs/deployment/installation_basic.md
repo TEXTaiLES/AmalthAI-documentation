@@ -8,8 +8,8 @@ The whole platform architecture is depicted in the following diagram:
 Minimum system requirements for a local installation are:
 
  - CPU: at least 8 cores
- - RAM: at least 16 GB
- - GPU: NVIDIA GPU with at least 12 GB VRAM
+ - RAM: at least 32 GB
+ - GPU: NVIDIA GPU with at least 16 GB VRAM
  - OS: Ubuntu 22.04 or newer
  - Browser: Google Chrome or Microsoft Edge
 
@@ -117,8 +117,6 @@ docker pull ultralytics/ultralytics:8.4.112
     </a>
 </p>
 
-Important Note: Make sure that you keep the `config.yml` file updated inside `/AmalthAI_WebApp` folder with the correct image names and the shared directory path where the `Segmentation`, `Classification` and `ObjectDetection` folders are located.
-
 ### Step 5 - Upload docker images into kind cluster
 
 To upload a locally built Docker image to your Kubernetes cluster, you have to run the following command:
@@ -139,20 +137,88 @@ For the annotation purposes of this platform, we utilize [CVAT](https://www.cvat
 </p>
 
 ### Step 7 - Platform UI Setup
-For the platform's UI, you have to create a Docker container with the appropriate libraries to run the web app.
 
-1) First open your terminal inside the `/AmalthAI_WebApp` folder and run:
+Before launching the application, both the `config.yml` and `docker-compose.yml` files in the `/AmalthAI_WebApp` folder must be configured according to your local environment.
 
-```shell
+#### `config.yml` Configuration
+
+Open `/AmalthAI_WebApp/config.yml` and verify the following settings:
+
+* The Docker image names under `images` are correct.
+* `base_host_path_out` points to the host directory containing the `Segmentation`, `Classification`, and `ObjectDetection` folders.
+* `base_host_path` points to the corresponding data directory **inside the container**.
+* The `chown_uid` and `chown_gid` values match the user and group IDs of the host machine.
+* The required service URLs, tokens, and other configuration parameters are correctly set.
+
+For example:
+
+```yaml
+paths:
+  base_host_path: /data
+  base_host_path_out: /home/user/kubeflow/kind-data
+```
+
+In this example, `/home/user/kubeflow/kind-data` is the directory on the **host machine** that contains the three task folders:
+
+```text
+/home/user/kubeflow/kind-data/
+├── Segmentation/
+├── Classification/
+└── ObjectDetection/
+```
+
+#### `docker-compose.yml` Configuration
+
+The `docker-compose.yml` file must also be updated to match the paths and services configured above.
+
+In particular, the host path mounted to `/data` **must correspond to `base_host_path_out` in `config.yml`**.
+
+For example, if `config.yml` contains:
+
+```yaml
+base_host_path_out: /home/user/kubeflow/kind-data
+```
+
+then `docker-compose.yml` should contain:
+
+```yaml
+volumes:
+  - /home/user/kubeflow/kind-data:/data
+```
+
+This mapping makes the same host directory available inside the AmalthAI container at `/data`.
+
+Also verify that:
+
+* The remaining host paths under `volumes` are correct for your machine.
+* The Kubernetes configuration is correctly mounted through `/root/.kube/`.
+* `KUBECONFIG` points to the correct Kubernetes configuration file.
+* `HESTIA_BASE_URL` and `HESTIA_API_KEY` contain the correct Hestia configuration.
+* `AMALTHAI_URL` is replaced with the URL/domain used to access the application.
+* The external `textailes` Docker network exists on the host machine.
+
+After configuring both files, build the AmalthAI Docker image.
+
+1. Open a terminal inside the `/AmalthAI_WebApp` folder and run:
+
+```bash
 docker build -t amalthai .
 ```
 
-2) After the build is completed, you can start the application with the following command:
-```shell
+2. After the build is completed, start the application using Docker Compose:
+
+```bash
 docker compose up -d
 ```
 
-Then you can easily navigate to the web app, by opening your browser and going to:
+3. Verify that the container is running:
+
+```bash
+docker ps
 ```
+
+4. The application can then be accessed through the configured `AMALTHAI_URL`. For a local installation using the default port, open:
+
+```text
 http://0.0.0.0:8056
 ```
