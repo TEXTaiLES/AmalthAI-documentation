@@ -136,7 +136,35 @@ For the annotation purposes of this platform, we utilize [CVAT](https://www.cvat
     </a>
 </p>
 
-### Step 7 - Platform UI Setup
+### Step 7 - VLM Installation
+
+For the platform's VLM-based inference (visual description and misclassification explanation), the platform uses [vLLM](https://github.com/vllm-project/vllm) to serve Qwen2-VL-2B-Instruct.
+
+First, pull the vLLM OpenAI-compatible server image:
+
+```bash
+docker pull vllm/vllm-openai:latest
+```
+
+Then, start the container on the `textailes` Docker network:
+
+```bash
+docker run --name qwen-vlm \
+  --network textailes \
+  --gpus all \
+  --restart always \
+  -v ~/.cache/huggingface:/root/.cache/huggingface \
+  -p 8000:8000 \
+  --shm-size=4g \
+  vllm/vllm-openai:latest \
+  --model Qwen/Qwen2-VL-2B-Instruct \
+  --gpu-memory-utilization 0.85 \
+  --max-model-len 16384
+```
+
+This exposes an OpenAI-compatible API on port `8000` that the AmalthAI backend uses as the VLM inference endpoint.
+
+### Step 8 - Platform UI Setup
 
 Before launching the application, both the `config.yml` and `docker-compose.yml` files in the `/AmalthAI_WebApp` folder must be configured according to your local environment.
 

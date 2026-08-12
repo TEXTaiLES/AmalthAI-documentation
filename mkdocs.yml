@@ -46,5 +46,6 @@ nav:
     - Semantic Segmentation Mode: manual/semantic_segm.md
     - Object Detection Mode: manual/object_detection.md
     - Classification Mode: manual/classification.md
+    - Vision-Language Assisted Inference: manual/inference_vlm.md
   - Expansions:
     - Platform Expansions: expansions/expansions.md
