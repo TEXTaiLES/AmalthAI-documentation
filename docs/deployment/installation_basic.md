@@ -227,25 +227,25 @@ Also verify that:
 
 After configuring both files, build the AmalthAI Docker image.
 
-1. Open a terminal inside the `/AmalthAI_WebApp` folder and run:
+1) Open a terminal inside the `/AmalthAI_WebApp` folder and run:
 
 ```bash
 docker build -t amalthai .
 ```
 
-2. After the build is completed, start the application using Docker Compose:
+2) After the build is completed, start the application using Docker Compose:
 
 ```bash
 docker compose up -d
 ```
 
-3. Verify that the container is running:
+3) Verify that the container is running:
 
 ```bash
 docker ps
 ```
 
-4. The application can then be accessed through the configured `AMALTHAI_URL`. For a local installation using the default port, open:
+4) The application can then be accessed through the configured `AMALTHAI_URL`. For a local installation using the default port, open:
 
 ```text
 http://0.0.0.0:8056
